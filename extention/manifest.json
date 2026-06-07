@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YLLA RADIO RPC",
+  "version": "0.1",
+  "description": "Ylla radio RPC daemon",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://radio.ylla.xyz/*"
+      ],
+      "js": [
+        "scraper.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ]
+}
